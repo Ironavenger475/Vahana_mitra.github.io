@@ -130,6 +130,10 @@ def logout():
     flash('Logged out successfully.', 'info')
     return redirect(url_for('profile'))
 
+@app.route('/tabs')
+def view_tabs():
+    return render_template('tabs.html')  
+
 @app.route("/admin")
 @login_required
 def admin():
